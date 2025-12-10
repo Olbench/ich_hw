@@ -26,13 +26,22 @@ function UserProfile() {
   if (loading) return <h2>Loading...</h2>;
 
   return (
-  <div className={style.user_card}>
-    <img className={style.avatar} src={user.picture.large} alt="avatar" />
-    <h2 className="">{user.name.title} {user.name.first} {user.name.last}</h2>
-    <p>{user.email}</p>
-    <p>Country: {user.location.country} City: {user.location.city}</p>
-    <button className={style.change_btn} onClick={fetchUser}>Swipe</button>
-  </div>);
+    <div className={style.container}>
+      <div className={style.user_card}>
+        <img className={style.avatar} src={user.picture.large} alt="avatar" />
+        <h2 className={style.full_name}>
+          {user.name.title} {user.name.first} {user.name.last}
+        </h2>
+        <p>{user.email}</p>
+        <p>
+          Country: {user.location.country} City: {user.location.city}
+        </p>
+        <button className={style.change_btn} onClick={fetchUser}>
+          Swipe
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default UserProfile;
