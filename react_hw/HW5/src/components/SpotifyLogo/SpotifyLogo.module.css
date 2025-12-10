@@ -1,0 +1,5 @@
+.spotify_header {
+    display: flex;
+    align-items: center;
+    padding: 55px 0 111px 35px;
+}

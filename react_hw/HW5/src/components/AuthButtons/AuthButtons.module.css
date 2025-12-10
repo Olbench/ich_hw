@@ -1,0 +1,16 @@
+.btn_container {
+  display: flex;
+  gap: 16px;
+  padding: 40px 55px;
+  border: 3px solid;
+  border-radius: 65px;
+}
+
+.btn {
+  transition: 0.3s ease-out;
+  fill: #1ed760;
+}
+.btn:hover {
+  transform: translateY(-10px);
+  fill: #4285f4;
+}
