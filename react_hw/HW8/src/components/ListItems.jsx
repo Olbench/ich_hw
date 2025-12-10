@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from './ListItems.module.css'
 
 function ListItems() {
   const [items, setItems] = useState([]);
@@ -16,14 +17,14 @@ function ListItems() {
   };
 
   return (
-    <div>
-      <form onSubmit={addItem}>
+    <div className={style.container}>
+      <form className={style.form} onSubmit={addItem}>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button type="submit">add item</button>
+        <button className={style.btn} type="submit">add item</button>
       </form>
       <ul>
         {items.map((item, id) => (
