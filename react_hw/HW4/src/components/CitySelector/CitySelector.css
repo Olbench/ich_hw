@@ -1,0 +1,13 @@
+.city_selector_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.city_selector_container select {
+    background-color: #58b15f;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 30px;
+}

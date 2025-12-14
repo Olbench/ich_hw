@@ -1,6 +1,6 @@
-import "../CitySelector/CitySelector.css";
+import "./CitySelector.css";
 
-function CitySelector({setCity}) {
+function CitySelector({ setCity }) {
   const citiesData = [
     {
       name: "Токио",
@@ -64,10 +64,23 @@ function CitySelector({setCity}) {
     },
   ];
 
+  const handleChange = (elem) => {
+    const city = citiesData.find((c) => c.name === elem.target.value);
+    setCity(city);
+  };
+
   return (
-    <>
-    
-    </>
+    <div className="city_selector_container">
+      <h1>Выберите город:</h1>
+      <select onChange={handleChange}>
+        <option value="">Выберите город</option>
+        {citiesData.map((city) => (
+          <option key={city.name} value={city.name}>
+            {city.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
 export default CitySelector;
